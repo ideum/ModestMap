@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<cml style="style.css" tuio="false" simulator="false">
+
+<StageKit fullscreen="true" />
+
+<ModestMapViewer x="0" y="0" width="1920" height="1080" autoTextLayout="false">
+ 
+    <TouchContainer class="map_container" visible="true" targetParent="false" mouseChildren="false"  disableNativeTransform="true" disableAffineTransform="true">
+       <ModestMap class="map_element" height="1080" width="1920" latitude="35.68949" longitude="139.69171" zoom="10" mapprovider="MicrosoftHybridMapProvider">
+			<ModestMapMarker latitude="35.36056" longitude="138.72778">
+				<Text text="Mount Fuji" color="0xffffff" fontSize="12" width="85" height="30" background="true" backgroundColor="0x000000" alpha="0.7"/>
+			</ModestMapMarker>
+			<ModestMapMarker latitude="35.69376" longitude="139.70352">
+				<Text text="Shinjuku" color="0xffffff" fontSize="12" width="73" height="30" background="true" backgroundColor="0x000000" alpha="0.7"/>
+			</ModestMapMarker>
+			<ModestMapMarker latitude="35.73711" longitude="139.71063">
+				<Text text="Shinjuku Gyoen" color="0xffffff" fontSize="12" width="122" height="30" background="true" backgroundColor="0x000000" alpha="0.7"/>
+			</ModestMapMarker>
+		</ModestMap>    
+       <GestureList>
+          <Gesture ref="double_tap" gestureOn="true"/>
+       </GestureList>                  
+       </TouchContainer> 
+	   </ModestMapViewer>
+	 
+	<Container class="block">
+		<Graphic x="1520" y="0" shape="rectangle" width="400" height="1080" fill="color" color="0x000000" lineStroke="0" alpha="0.7" />
+	</Container>
+	
+	<Container class="block">
+		<Graphic x="0" y="0" shape="rectangle" width="100" height="1080" fill="color" color="0x000000" lineStroke="0" alpha="0.7" />
+	</Container>
+	<Album x="20" y="100" margin="0" horizontal="false" height="1080" backgroundAlpha="0">	 	
+	<Text class="title" border="false" selectable="false" color="0xffffff" fontSize="16" text="Shinjuku" x="1540" y="10"/>   
+	<ModestMapViewer x="1540" y="50" width="360" height="300" autoTextLayout="false">
+		<TouchContainer class="map_container" visible="true" targetParent="false" mouseChildren="false"  disableNativeTransform="true" disableAffineTransform="true">
+			<ModestMap class="map_element" height="300" width="360" latitude="35.69384" longitude="139.70355" zoom="17" mapprovider="MicrosoftHybridMapProvider">
+			</ModestMap>    
+       <GestureList>
+          <Gesture ref="double_tap" gestureOn="true"/>
+       </GestureList>                  
+    </TouchContainer>       
+        <TouchContainer class="info_container" visible="false" targetParent="true" mouseChildren="false" >
+			<Graphic color="0x000000" alpha="0.7" lineStroke="0" class="info_bg" shape="rectangle"/>                                     
+			<Text width="320" height="300" x="20" y="20" color="0xffffff" fontSize="12" wordWrap="true" multiline="true" textAlign="left" text="Shinjuku is one of the 23 special wards of Tokyo, Japan. It is a major commercial and administrative centre, housing the busiest train station in the world (Shinjuku Station) and the Tokyo Metropolitan Government Building, the administration centre for the government of Tokyo. As of 2008, the ward has an estimated population of 312,418 and a population density of 17,140 persons per km². The total area is 18.23 km²."/>
+        </TouchContainer>
+        <Menu class="menu_container" x="80" y="-45" alpha="0.8" position="top" autoHide="false" visible="true">
+            <Include src="infoButton.cml"/>
+        </Menu>
+        <GestureList>
+            <Gesture ref="tap" gestureOn="true"/>
+        </GestureList>
+	</ModestMapViewer>
+
+	<Text class="title" border="false" selectable="false" color="0xffffff" fontSize="16" text="Mount Fuji" x="1540" y="370" width="200"/>   
+	 <ModestMapViewer x="1540" y="410" width="360" height="300" autoTextLayout="false">
+              <TouchContainer class="map_container" visible="true" targetParent="false" mouseChildren="false"  disableNativeTransform="true" disableAffineTransform="true">
+       <ModestMap class="map_element" height="300" width="360" latitude="35.36056" longitude="138.72778" zoom="10" mapprovider="MicrosoftHybridMapProvider">
+              </ModestMap>    
+       <GestureList>
+          <Gesture ref="double_tap" gestureOn="true"/>
+       </GestureList>                  
+       </TouchContainer>       
+       
+        <TouchContainer class="info_container" visible="false" targetParent="true" mouseChildren="false" >
+                <Graphic color="0x000000" alpha="0.7" lineStroke="0" class="info_bg" shape="rectangle"/>                                    
+                <Text width="320" height="300" x="20" y="20" color="0xffffff" fontSize="12" wordWrap="true" multiline="true" textAlign="left" text="Mount Fuji, located on Honshu Island, is the highest mountain in Japan at 3,776.24 m (12,389 ft). An active stratovolcano that last erupted in 1707–08, Mount Fuji lies about 100 kilometres (60 mi) south-west of Tokyo, and can be seen from there on a clear day. Mount Fuji's exceptionally symmetrical cone, which is snow-capped several months a year, is a well-known symbol of Japan and it is frequently depicted in art and photographs, as well as visited by sightseers and climbers."/>
+        </TouchContainer>
+        <Menu class="menu_container" x="95" y="-45" alpha="0.8" position="top" autoHide="false" visible="true">
+            <Include src="infoButton.cml"/>
+        </Menu>
+        <GestureList>
+            <Gesture ref="tap" gestureOn="true"/>
+        </GestureList>
+	</ModestMapViewer>
+
+	<Text class="title" border="false" selectable="false" color="0xffffff" fontSize="16" text="Shinjuku Gyoen" x="1540" y="730" width="200"/>   
+	 <ModestMapViewer x="1540" y="770" width="360" height="300" autoTextLayout="false">
+       <TouchContainer class="map_container" visible="true" targetParent="false" mouseChildren="false"  disableNativeTransform="true" disableAffineTransform="true">
+       <ModestMap class="map_element" height="300" width="360" latitude="35.68711" longitude="139.71063" zoom="17" mapprovider="MicrosoftHybridMapProvider">
+              </ModestMap>    
+       <GestureList>
+          <Gesture ref="double_tap" gestureOn="true"/>
+       </GestureList>                  
+       </TouchContainer>       
+       
+        <TouchContainer class="info_container" visible="false" targetParent="true" mouseChildren="false" >
+                <Graphic color="0x000000" alpha="0.7" lineStroke="0" class="info_bg" shape="rectangle"/>                                     
+                <Text width="320" height="300" x="20" y="20" color="0xffffff" fontSize="12" wordWrap="true" multiline="true" textAlign="left" text="Shinjuku Gyoen National Garden is a large park with an eminent garden in Shinjuku and Shibuya, Tokyo, Japan. It was originally a residence of the Naitō family (daimyo) in the Edo period. Afterwards, it became a garden under the management of the Imperial Household Agency of Japan. It is now a park under the jurisdiction of the national Ministry of the Environment."/>
+        </TouchContainer>
+        <Menu class="menu_container" x="135" y="-45" alpha="0.8" position="top" autoHide="false" visible="true">
+            <Include src="infoButton.cml"/>
+        </Menu>
+        <GestureList>
+            <Gesture ref="tap" gestureOn="true"/>
+        </GestureList>
+	</ModestMapViewer>
+	</Album>
+
+	 <Container>
+	   	<Image src="logo.png" x="20" y="20" width="50" height="240" alpha="0.6"/>
+		<Image src="oe-logo.png" x="25" y="1000" width="50" height="69" alpha="0.6"/>
+	</Container>
+</cml>
